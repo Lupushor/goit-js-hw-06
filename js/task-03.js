@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const container = document.querySelector('.gallary');
+const ulEl = document.createElement('ul');
+const liEl = document.createElement('li');
+const imgEl = document.createElement('img');
+imgEl.append(...images)
+
+console.log(liEl);
