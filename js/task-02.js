@@ -11,8 +11,9 @@ const container = document.querySelector('#ingredients');
 const ulEl = document.createElement('ul');
 
 ingredients.forEach((ingredientItem) => {
-  const liEl = `<li>${ingredientItem}</li>`;
-  ulEl.insertAdjacentHTML('beforeend', liEl);
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredientItem;
+  ulEl.append(liEl)
 });
 
 container.append(ulEl);
