@@ -13,11 +13,19 @@ const images = [
   },
 ];
 
+const ul = document.createElement('ul');
 
-const container = document.querySelector('.gallary');
-const ulEl = document.createElement('ul');
-const liEl = document.createElement('li');
-const imgEl = document.createElement('img');
-imgEl.append(...images)
+let listItems = '';
 
-console.log(liEl);
+images.forEach((image) => {
+  listItems += `<li><img class="photo" src="${image.url}" width = 640 alt="${image.alt}"></li>`;
+});
+
+ul.insertAdjacentHTML('beforeend', listItems);
+
+document.body.appendChild(ul);
+
+const image = document.querySelector('.photo');
+
+listItems.style.display = 'flex';
+listItems.style.gap = '20';
