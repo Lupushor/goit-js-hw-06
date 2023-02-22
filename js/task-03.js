@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const ul = document.createElement('ul');
+const ulItems = document.querySelector('.gallery');
 
 let listItems = '';
 
@@ -21,11 +21,15 @@ images.forEach((image) => {
   listItems += `<li><img class="photo" src="${image.url}" width = 640 alt="${image.alt}"></li>`;
 });
 
-ul.insertAdjacentHTML('beforeend', listItems);
+ulItems.insertAdjacentHTML('beforeend', listItems);
+document.body.appendChild(ulItems);
 
-document.body.appendChild(ul);
+// const image = document.querySelector('.photo');
 
-const image = document.querySelector('.photo');
-
-listItems.style.display = 'flex';
-listItems.style.gap = '20';
+// ulItems.style.display = 'flex';
+// ulItems.style.gap = '20';
+// listItems.style.padding = '20';
+// image.style.borderRadius = '50';
+// image.style.justifyContent = 'center';
+// image.style.alignItems = 'center';
+// ulItems.style.listStyleType = 'none';
